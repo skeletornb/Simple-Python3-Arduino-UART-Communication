@@ -5,7 +5,16 @@ This is my first reposit. :tada::tada::tada:
 It's a simple `Python 3` and `Arduino Uno` communication with `Tkinter`, `PySerial`, Uno's `builtin LED`, and tiny command interpreter on Arduino.
 
 I selected Uno because it have builtin LED and it can demonstrate switching without additional stuffs. And it have at home. :sweat_smile: Instead of builtin LED you can use any pin with e.g. with MOSFET, relay, SSL relay or 3-phase contactor. It is possible to send command from any serial tools e.g. Arduino IDE serial monitor. If Arduino receive command it will do something and/or transmit feedback.
+
 ## Usage
+![Port query and port select](/Connect.png)
+![Data entry](/Math.png)
+* If you start app before connect Arduino you can query ports.
+* The message can be entered directly in the upper large field too.
+* Input values can be entered in two lower fields and then "+" or "-" buttons write to command line.
+* "FIRMWARE", "LED ON", "LED OFF" are instant commands.
+
+
 ## Installation
 Only [PySerial](https://github.com/pyserial/pyserial) need to install.
 ### Options on Windows:
@@ -20,12 +29,14 @@ python3 -m pip install pyserial
 sudo pip3 install pyserial
 sudo python3 -m pip install pyserial
 ```
+
 ## Serial commands
 * ADDxxxyyy	: xxx + yyy
 * SUBxxxyyy	: xxx - yyy
 * LED0 		  : Builtin LED OFF
 * LED1      : Builtin LED ON
 * FW 		    : Firmware query
+
 ## Arduino code
 ```c
 // --- ARDUINO UNO --------------------
@@ -120,6 +131,7 @@ void cCommandErase() {
   }
 }
 ```
+
 ## Python code
 ```python3
 import serial
