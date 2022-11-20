@@ -2,9 +2,9 @@
 
 This is my first reposit. :tada::tada::tada:
 
-It's a simple `Python 3` and `Arduino Uno` communication with `Tkinter`, `PySerial`, Uno's `builtin LED`, and tiny command interpreter on Arduino.
+It's a simple `Python 3` and `Arduino Uno` communication demo with `Tkinter`, `PySerial`, Uno's `builtin LED`, and tiny command interpreter on Arduino.
 
-I selected Uno because it have builtin LED and it can demonstrate switching without additional stuffs. And it have at home. :sweat_smile: Instead of builtin LED you can use any pin with e.g. with MOSFET, relay, SSL relay or 3-phase contactor. It is possible to send command from any serial tools e.g. Arduino IDE serial monitor. If Arduino receive command it will do something and/or transmit feedback.
+I selected Uno because it have builtin LED and it can demonstrate switching without additional stuffs. And it have at home. :sweat_smile: Instead of builtin LED you can use any pin with e.g. MOSFET, relay, SSL relay or 3-phase contactor. It is possible to send command from any serial tools e.g. Arduino IDE serial monitor. If Arduino receive command it will do something and/or transmit response.
 
 ## Usage
 ![Port query and port select](/Connect.png)
