@@ -63,6 +63,7 @@ void loop() {
   }
   if (bSerialReady) {
     vCommandExecutor(sCommand);
+    vCommandErase();
     bSerialReady = false;
   }
 }
@@ -122,10 +123,11 @@ void vCommandExecutor(char sCommand[]) {
     Serial.println(Firmware);
     return;
   }
-  cCommandErase();
+  // --- RESPONSE FOR WRONG COMMAND --------------------
+  Serial.println("Wrong command");
 }
 //--- sCommand ERASER METHOD --------------------
-void cCommandErase() {
+void vCommandErase() {
   for (int i = 0; i <= 8; i++) {
     sCommand[i] = 0;
   }
@@ -159,7 +161,7 @@ class uart(object):
     def portquery(self):                            # Query connected devices's ports
         self.ports= list_ports.comports()
         for x in range(len(self.lConnected)):        # Emptying lConnected[]
-            del(self.lConnected[x])
+            del(self.lConnected[-1])
         for p in self.ports:                        # Uploading lConnected[]
             self.lConnected.append(p.device)
         return self.lConnected
