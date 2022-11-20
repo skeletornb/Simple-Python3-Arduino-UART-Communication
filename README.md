@@ -1,6 +1,6 @@
 # Simple-Python3-Arduino-UART-Communication
 
-This is my first reposit. :tada::tada::tada:
+This is my first repository. :tada::tada::tada:
 
 It's a simple `Python 3` and `Arduino Uno` communication demo with `Tkinter`, `PySerial`, Uno's `builtin LED`, and tiny command interpreter on Arduino.
 
@@ -8,7 +8,8 @@ I selected Uno because it have builtin LED and it can demonstrate switching with
 
 ## Usage
 ![Port query and port select](/Connect.png)
-![Data entry](/Math.png)
+![Data entry](/Operation.png)
+![On MacOS](/Onmacos.png)
 * If you start app before connect Arduino you can query ports.
 * The message can be entered directly in the upper large field too.
 * Input values can be entered in two lower fields and then "+" or "-" buttons write to command line.
@@ -17,14 +18,14 @@ I selected Uno because it have builtin LED and it can demonstrate switching with
 
 ## Installation
 Only [PySerial](https://github.com/pyserial/pyserial) need to install.
-### Options on Windows:
+### Opportunities on Windows:
 ```
 pip install pyserial
 pip3 install pyserial
 python -m pip install pyserial
 python3 -m pip install pyserial
 ```
-### Options on MAC/Linux:
+### Opportunities on MAC/Linux:
 ```
 sudo pip3 install pyserial
 sudo python3 -m pip install pyserial
@@ -37,7 +38,7 @@ sudo python3 -m pip install pyserial
 * LED1      : Builtin LED ON
 * FW 		    : Firmware query
 
-## Arduino code
+## Arduino C code
 ```c
 // --- ARDUINO UNO --------------------
 #define Firmware "1.22.11"                                                  // This is just a sample it can be anything
@@ -134,7 +135,7 @@ void vCommandErase() {
 }
 ```
 
-## Python code
+## Python 3 code
 ```python3
 import serial
 from serial.tools import list_ports
